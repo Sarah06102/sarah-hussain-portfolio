@@ -1,0 +1,168 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-card: hsl(var(--card));
+  --animate-fade-in-delay: fade-in 700ms ease-out forwards; 
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+  @layer base {
+    :root {
+      --background: white;
+      --foreground: rgba(129, 140, 248, 0.8);
+      --primary-text-color: black;
+      --border: 222 47% 11%;
+      --card: 222 47% 11%;
+      --primary: rgba(129, 140, 248, 0.8);
+      --primary-foreground: white;
+      --toggle-bg: rgba(129, 140, 248, 0.8);
+      --toggle-fg: rgba(41, 41, 41, 0.911);
+      --border: 1px solid rgba(44, 44, 44, 0.63);
+    }
+
+    :root.dark {
+      --background: #121212;
+      --foreground: rgba(129, 140, 248, 0.8);
+      --border: black;
+      --card: 210 40% 98%;
+      --primary-text-color: white;
+      --primary: rgba(129, 140, 248, 0.8);
+      --primary-foreground: #121212;
+      --toggle-bg: rgba(129, 140, 248, 0.8);
+      --toggle-fg: rgb(255, 255, 255);
+      --border: 1px solid rgb(255, 255, 255);
+    }
+
+    * {
+      @apply border-border;
+    }
+
+    html {
+      @apply scroll-smooth;
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--primary-text-color); 
+      transition: background-color 300ms ease;
+    }
+
+  }
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width <= 480px) {
+    max-width: 480px;
+  }
+  @media (480px < width <= 640px) {
+    max-width: 640px;
+  }
+  @media (640px < width <= 768px) {
+    max-width: 768px;
+  }
+  @media (768px < width <= 1024px) {
+    max-width: 1024px;
+  }
+  @media (1024px < width <= 1280px) {
+    max-width: 1280px;
+  }
+}
+
+@utility text-glow {
+  @apply relative;
+  text-shadow: 0 0 10px rgba(129, 140, 248, 0.8);
+}
+
+@utility card-hover {
+  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+}
+
+@utility gradient-border {
+  @apply relative rounded-md;
+  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
+  background-clip: padding-box;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+}
+
+@utility button {
+  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-semibold transition-all duration-200 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)];
+  hover:scale-105 active: scale-95;
+}
+
+#root {
+  background-color: var(--background);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  transition: background-color 250ms ease-in-out;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.toggle + label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--primary-text-color);
+
+}
+
+.toggle + label::before {
+  content: "";
+  height: 1em;
+  width: 2em;
+  border-radius: 1em;
+  background-color: var(--toggle-bg);
+  margin-right: 0.5em;
+  transition: background-color 250ms ease-in-out;
+  border: var(--border);
+  display: relative;
+}
+
+.toggle + label::after {
+  content: "";
+  height: 0.8em;
+  width: 0.8em;
+  border-radius: 1em;
+  background-color: var(--toggle-fg);
+  position: absolute;
+  left: 1.1em;
+  transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
+}
+
+.toggle:checked + label::after {
+  transform: translate(100%);
+}
+
+#menu {
+  cursor:pointer;
+  position: absolute;
+  right: 2em;
+}
