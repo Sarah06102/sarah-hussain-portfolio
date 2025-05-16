@@ -10,8 +10,9 @@ export const NavBar = () => {
         {name: "About", href: "#About"},
         {name: "Skills", href: "#Skills"},
         {name: "Projects", href: "#Projects"},
-        {name: "Contact", href: "#Contact"},
     ];
+    const resumeLink = { name: "Resume", href: "/sarah-hussain-resume.pdf", download: true };
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -38,18 +39,24 @@ export const NavBar = () => {
                                 {item.name}
                             </a>
                         ))}
+                            <a href={resumeLink.href} download={resumeLink.download} className="bg-indigo-300 text-black text-sm px-4 py-2 rounded hover:bg-indigo-400 transition">
+                                {resumeLink.name}
+                            </a>
                     </div> 
                     <div className="flex items-center gap-2 ml-4"> 
                         <ToggleBtn />
                     </div>
 
                     {/* Menu Toggle on Mobile */} 
+                    <a href={resumeLink.href} download={resumeLink.download} className="absolute top-5.5 right-20 bg-indigo-300 text-black text-sm px-4 py-2 rounded hover:bg-indigo-400 transition md:hidden" onClick={() => setMainOpen(false)}>
+                        {resumeLink.name}
+                    </a>
                     <button id="menu" className="md:hidden p-1 text-foreground z-50" onClick={() => setMainOpen((prev) => !prev)} aria-label={isMainOpen ? "Close Menu" : "Open Menu"}>
                         {isMainOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>
             </div>
-
+                    
                 {/* Mobile overlay menu */}
                 <div className={`fixed inset-0 bg-background/80 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 ${isMainOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                     <div className="flex flex-col space-y-8 items-center text-xl">
