@@ -166,12 +166,8 @@
   }
 }
 
-.fade-in {
-  animation: fade-in 0.8s ease-out forwards;
-}
-
 html, body {
-  transition: background-color 400ms ease ease-in-out, color 200ms ease ease-in-out;
+  transition: background-color 400ms ease ease-in-out, color 200ms;
 }
 
 .toggle + label:hover::before {
@@ -215,4 +211,46 @@ html, body {
 .light-slider .slick-prev::before,
 .light-slider .slick-next::before {
   color: #4f46e5; 
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto;
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-down {
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.fade-in-start {
+  opacity: 0;
+  transform: translateY(0); 
 }
