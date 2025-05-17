@@ -1,4 +1,5 @@
 import { Background } from "../components/background"
+import { Footer } from "../components/footer"
 import { NavBar } from "../components/navbar"
 import { About } from "./about"
 import { Projects } from "./projects"
@@ -59,7 +60,7 @@ export const Home = () => {
                 </div>
             </main>
             {/* Social Icons */}
-            <div className="flex gap-6 -mt-60 justify-center fade-in-start">
+            <div className="flex gap-6 -mt-55 justify-center fade-in-start">
                 <a href="https://www.linkedin.com/in/sarah-hussain01/" target="_blank" className="p-2 rounded-full transition-all duration-300 hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(129,140,248,1)]" rel="noopener noreferrer">
                     <Linkedin size={24}/>
                 </a>
@@ -84,6 +85,7 @@ export const Home = () => {
                 <Projects />  
             </div>
             {/* Footer */}
+            <Footer />
         </div>
     )
 

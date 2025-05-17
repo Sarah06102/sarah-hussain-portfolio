@@ -1,4 +1,4 @@
-import { SiPython, SiJavascript, SiHtml5, SiCss3, SiSqlite, SiTypescript, SiReact, SiTailwindcss, SiDjango, SiGit, SiGithub, SiFigma, SiFirebase, SiPytorch } from 'react-icons/si'
+import { SiPython, SiJavascript, SiHtml5, SiCss3, SiSqlite, SiTypescript, SiReact, SiTailwindcss, SiDjango, SiGit, SiGithub, SiFigma, SiFirebase, SiPytorch, SiVercel } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa';
 import { BiLogoVisualStudio } from 'react-icons/bi';
 import useLocalStorage from 'use-local-storage';
@@ -53,11 +53,12 @@ export const Skills = () => {
                         <div className="flex flex-col items-center">
                             {/* Tools */} 
                             <h4 className="mb-6 text-xl font-semibold text-center w-full">Tools</h4>
-                            <div className="grid grid-cols-2 gap-x-5 gap-y-3 place-items-center w-full mx-auto justify-center">
+                            <div className="grid grid-cols-3 gap-x-5 gap-y-3 place-items-center w-full mx-auto justify-center">
                                 <SkillCard icon={<SiGit />} title="Git" color="#f05032"/>
                                 <SkillCard icon={<SiGithub />} title="GitHub" color="#ffffff"/>
                                 <SkillCard icon={<BiLogoVisualStudio />} title="VS Code" color="#007acc"/>
                                 <SkillCard icon={<SiFigma />} title="Figma" color="#f24e1e"/>
+                                <SkillCard icon={<SiVercel />} title="Vercel" color="#000000"/>
                             </div>
                         </div>
                     </div>

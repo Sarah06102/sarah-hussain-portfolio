@@ -6,11 +6,15 @@ import 'slick-carousel/slick/slick-theme.css'
 const ProjectData = [
     {
         name: `TrackMyApps`,
-        description: `A Chrome extension that allows users to save job postings from platforms like LinkedIn directly to a personalized dashboard. With one click, users can capture job details and sync them to a real-time web app powered by Firebase. Built to simplify job tracking, reduce tab clutter, and help users stay organized throughout their job search.`
+        description: `A Chrome extension that allows users to save job postings from platforms like LinkedIn directly to a personalized dashboard. With one click, users can capture job details and sync them to a real-time web app powered by Firebase. Built to simplify job tracking, reduce tab clutter, and help users stay organized throughout their job search.`,
+        skills: ["React", "Firebase", "Chrome API", "HTML", "CSS"],
+        // github:
     },
     {
         name: `AutoTrack`,
-        description: `A web-based expense tracker that helps users automate their spending logs, set budgets, and visualize financial habits. AutoTrack syncs in real time and offers personalized alerts, budget insights, and a clean, user-friendly interface to simplify money management and encourage smarter financial decisions.`
+        description: `A web-based expense tracker that helps users automate their spending logs, set budgets, and visualize financial habits. AutoTrack syncs in real time and offers personalized alerts, budget insights, and a clean, user-friendly interface to simplify money management and encourage smarter financial decisions.`,
+        skills: ["HTML", "CSS", "Django", "React"],
+        // github:
     },
     {
         name: `Name`,
@@ -51,10 +55,21 @@ export const Projects = () => {
                     {ProjectData.map((p, i) => (
                         <div key={i}>
                             <div className={`min-w-[280px] max-w-[90vw] h-[450px] rounded-xl p-6 m-2 card-transform hover:shadow-lg ${isDarkTheme ? 'dark-card' : 'light-card'}`}>
-                                <div className="flex flex-col justify-center items-center gap-4 p-4">
+                                <div className="flex flex-col justify-between items-center h-full gap-4 p-4">
                                     <p className="text-xl font-semibold mb-2 text-center">{p.name}</p>
                                     <p className="text-sm text-center break-words max-w-[260px]">{p.description}</p>
-                                    <a className="hover:text-indigo-400 hover:underline text-primary" href="" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                   
+                                    {/* Skills */}
+                                <div className="flex flex-wrap justify-center gap-2 md:mb-6">
+                                    {p.skills?.map((skill, index) => (
+                                    <span key={index} className="px-3 py-1 text-sm rounded-full bg-transparent border font-medium hover:text-indigo-300">
+                                        {skill}
+                                    </span>
+                                    ))}
+
+                                    {/* Github Link */}
+                                </div>
+                                    <a className="format hover:text-indigo-400 mt-0 -mb-2 text-center hover:underline text-primary md:mt-2 md:-mb-4" href={p.github || '#'} target="_blank" rel="noopener noreferrer">GitHub</a>
                                 </div>
                             </div>
                         </div>
