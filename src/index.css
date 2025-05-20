@@ -187,7 +187,7 @@ html, body {
 }
 
 .light-card {
-  @apply bg-blue-50 hover:bg-blue-100 text-gray-800 shadow-md;
+  @apply bg-gray-300 hover:bg-gray-200 text-gray-800 shadow-md;
 }
 
 .dark-card {
