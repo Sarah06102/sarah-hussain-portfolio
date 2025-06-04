@@ -7,7 +7,7 @@ const ProjectData = [
     {
         name: `TrackMyApps`,
         description: `A Chrome extension that allows users to save job postings from platforms like LinkedIn directly to a personalized dashboard. With one click, users can capture job details and sync them to a real-time web app powered by Firebase. Built to simplify job tracking, reduce tab clutter, and help users stay organized throughout their job search.`,
-        skills: ["React", "Firebase", "Chrome API", "HTML", "Tailwind CSS"],
+        skills: ["React", "Firebase", "Chrome API", "Tailwind CSS"],
         github: `https://github.com/Sarah06102/TrackMyApps`,
     },
     {
