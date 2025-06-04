@@ -17,6 +17,12 @@ const ProjectData = [
         skills: ["HTML", "CSS", "Django", "React"],
         // github:
     },
+    {
+        name: `MyPassVault`,
+        description: `A web-based password manager that simplifies secure credential storage, strong password generation, and password strength validation. MyPassVault offers customizable password rules and a user-friendly interface to help users manage their online accounts confidently and securely.`,
+        skills: ["React", "Django", "Tailwind CSS", "RESTful API", "PostgreSQL"],
+        github: `https://github.com/Sarah06102/MyPassVault`,
+    },
 ]
 
 export const Projects = () => {
