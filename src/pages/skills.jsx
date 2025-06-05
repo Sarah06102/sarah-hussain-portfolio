@@ -1,4 +1,4 @@
-import { SiPython, SiJavascript, SiHtml5, SiCss3, SiSqlite, SiTypescript, SiReact, SiTailwindcss, SiDjango, SiGit, SiGithub, SiFigma, SiFirebase, SiPytorch, SiVercel } from 'react-icons/si'
+import { SiPython, SiJavascript, SiHtml5, SiCss3, SiSqlite, SiTypescript, SiReact, SiTailwindcss, SiDjango, SiGit, SiGithub, SiFigma, SiFirebase, SiPytorch, SiVercel, SiRender } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa';
 import { BiLogoVisualStudio } from 'react-icons/bi';
 import useLocalStorage from 'use-local-storage';
@@ -59,6 +59,7 @@ export const Skills = () => {
                                 <SkillCard icon={<BiLogoVisualStudio />} title="VS Code" color="#007acc"/>
                                 <SkillCard icon={<SiFigma />} title="Figma" color="#f24e1e"/>
                                 <SkillCard icon={<SiVercel />} title="Vercel" color="#000000"/>
+                                <SkillCard icon={<SiRender />} title="Render" color="#000000"/>
                             </div>
                         </div>
                     </div>
