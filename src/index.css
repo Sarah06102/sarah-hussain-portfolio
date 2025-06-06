@@ -254,3 +254,10 @@ html, body {
   opacity: 0;
   transform: translateY(0); 
 }
+
+@layer components {
+  .slick-list {
+    overflow-x: clip;
+    overflow-y: visible !important;
+  }
+}
