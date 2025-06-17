@@ -62,7 +62,7 @@ export default function Chatbot() {
     }, [open]);
 
     return (
-        <div className="fixed bottom-4 right-4 z-50 pointer-events-none rounded">
+        <div className="fixed bottom-4 right-4 z-20 pointer-events-none rounded">
             <div className="pointer-events-auto flex flex-col items-end gap-2">
                 {/* Button */}
                 {!open && (

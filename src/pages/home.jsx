@@ -46,15 +46,15 @@ export const Home = () => {
 
             <ScrollFade />
             {/* Main */}
-            <main id="Home" className="min-h-screen flex flex-col items-center justify-center px-4 pt-24 transition-all">
+            <main id="Home" className="min-h-screen flex flex-col items-center justify-center px-4 pt-24 md:pt-24 transition-all">
                 
                 <div className="container max-w-4xl mx-auto text-center">
-                    <div className="space-y-6">
-                        <h1 className="text-4xl md:text-5xl font-bold fade-in-start">
+                    <div className="space-y-6 px-2 sm:px-6">
+                        <h1 className="text-4xl md:text-5xl sm:text-4xl font-bold fade-in-start">
                             <span >Hi, I'm </span>
                             <span className="text-indigo-500">Sarah Hussain</span>
                         </h1>
-                        <div className="container space-y-5 text-lg fade-in-start">
+                        <div className="container space-y-5 text-lg fade-in-start sm:text-lg">
                             <p>Engineering Student @ the University of Waterloo</p>
                             <p>I'm passionate about developing practical and tech-powered solutions, from data-driven tools to full-stack applications, to solve complex business problems. </p>
                         </div>
@@ -62,7 +62,7 @@ export const Home = () => {
                 </div>
             </main>
             {/* Social Icons */}
-            <div className="flex gap-6 -mt-55 justify-center fade-in-start">
+            <div className="flex gap-6 md:-mt-55 justify-center fade-in-start">
                 <a href="https://www.linkedin.com/in/sarah-hussain01/" target="_blank" className="p-2 rounded-full transition-all duration-300 hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(129,140,248,1)]" rel="noopener noreferrer">
                     <Linkedin size={24}/>
                 </a>
