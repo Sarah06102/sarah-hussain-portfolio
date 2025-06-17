@@ -10,6 +10,7 @@ export const NavBar = () => {
         {name: "About", href: "#About"},
         {name: "Skills", href: "#Skills"},
         {name: "Projects", href: "#Projects"},
+        {name: "Experience", href: "#Experience"},
     ];
     const resumeLink = { name: "Resume", href: "/sarah-hussain-resume.pdf", download: true };
 

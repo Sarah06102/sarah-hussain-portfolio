@@ -6,6 +6,8 @@ import { Projects } from "./projects"
 import { Skills } from "./skills"
 import { Mail, Github, Linkedin } from 'lucide-react';
 import { useEffect, useRef } from 'react'
+import Chatbot from "../components/Chatbot"
+import Experience from "./experience"
 
 export const ScrollFade = () => {
     const lastScrollY = useRef(window.scrollY);
@@ -46,11 +48,11 @@ export const Home = () => {
             {/* Main */}
             <main id="Home" className="min-h-screen flex flex-col items-center justify-center px-4 pt-24 transition-all">
                 
-            <div className="container max-w-4xl mx-auto text-center">
+                <div className="container max-w-4xl mx-auto text-center">
                     <div className="space-y-6">
                         <h1 className="text-4xl md:text-5xl font-bold fade-in-start">
                             <span >Hi, I'm </span>
-                            <span>Sarah Hussain</span>
+                            <span className="text-indigo-500">Sarah Hussain</span>
                         </h1>
                         <div className="container space-y-5 text-lg fade-in-start">
                             <p>Engineering Student @ the University of Waterloo</p>
@@ -72,18 +74,29 @@ export const Home = () => {
                 </a>
             </div>
 
+            {/* Chatbot */}
+            <Chatbot />
+            
             {/* About */}
             <div className="fade-in-start">
                 <About />
             </div>
+
             {/* Skills */}
             <div className="fade-in-start">
             <Skills />
             </div>
+
             {/* Projects */}
             <div className="fade-in-start">
                 <Projects />  
             </div>
+
+            {/* Experience */}
+            <div className="fade-in-start">
+                <Experience />
+            </div>
+
             {/* Footer */}
             <Footer />
         </div>

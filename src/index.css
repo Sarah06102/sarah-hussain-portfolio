@@ -184,14 +184,100 @@ html, body {
 
 .scale-transition:hover {
   transform: scale(1.08);
+  
 }
 
 .light-card {
-  @apply bg-gray-300 hover:bg-gray-200 text-gray-800 shadow-md;
+  @apply bg-gray-50 hover:bg-gray-200 text-gray-800 shadow-md border border-gray-200;
 }
 
 .dark-card {
-  @apply bg-neutral-800 hover:bg-neutral-700 text-white;
+  @apply bg-neutral-800 hover:bg-neutral-700 text-white border border-gray-500;
+}
+
+.light-card-projects {
+  @apply bg-gray-50 hover:bg-gray-200 text-gray-800 shadow-md border border-gray-200;
+}
+
+.dark-card-projects {
+  @apply bg-neutral-800 hover:bg-neutral-700 text-white border border-gray-500;
+}
+
+.light-card-experience {
+  @apply text-gray-800;
+}
+
+.dark-card-experience {
+  @apply text-white;
+}
+
+.dark-projects-skills {
+  @apply text-white bg-indigo-900/80 border border-gray-600
+}
+
+.light-projects-skills {
+  @apply text-black bg-indigo-100 border border-gray-300
+}
+
+/* Chatbot container */
+.chatbot-light {
+  @apply bg-gray-100 border border-gray-300;
+}
+
+.chatbot-dark {
+  @apply bg-neutral-800 border border-gray-700;
+}
+
+/* Header */
+.chatbot-header-light {
+  @apply bg-gray-300 text-gray-900 border-b border-gray-300;
+}
+
+.chatbot-header-dark {
+  @apply bg-neutral-900 text-white border-b border-gray-700;
+}
+
+/* Messages */
+.chatbot-message-user-light {
+  @apply bg-indigo-100 text-black;
+}
+
+.chatbot-message-user-dark {
+  @apply bg-indigo-700 text-white;
+}
+
+.chatbot-message-bot-light {
+  @apply bg-gray-200 text-black;
+}
+
+.chatbot-message-bot-dark {
+  @apply bg-gray-600 text-white;
+}
+
+/* Prompt buttons */
+.chatbot-prompt-light {
+  @apply bg-gray-200 border border-neutral-400 text-black hover:bg-gray-300;
+}
+
+.chatbot-prompt-dark {
+  @apply bg-gray-700 text-white hover:bg-gray-600;
+}
+
+/* Input */
+.chatbot-input-light {
+  @apply bg-gray-200 border-gray-300 text-black;
+}
+
+.chatbot-input-dark {
+  @apply bg-neutral-900 border-gray-600 text-white;
+}
+
+.chatbot-icon-dark {
+  @apply hover:bg-gray-700
+}
+
+.chatbot-icon-light {
+  @apply hover:bg-gray-200
 }
 
 .card-transform {
@@ -200,7 +286,6 @@ html, body {
 
 .card-transform:hover {
   transform: translateY(-8px);
-
 }
 
 .dark-slider .slick-prev::before,

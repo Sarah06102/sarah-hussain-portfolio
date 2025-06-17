@@ -14,6 +14,7 @@ export const ToggleBtn = () => {
             </div>
         );
     };
+    
     return (
         <div className={isDarkTheme ? "dark" : ""}>
             <Toggle isChecked={isDarkTheme} handleChange={() => { 

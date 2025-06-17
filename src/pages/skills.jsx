@@ -19,7 +19,7 @@ export const Skills = () => {
         <section id="Skills" className="py-24 px-4">
             <div className="container mx-auto max-w-7xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-                    <span className="text-primary">
+                    <span className="text-indigo-500 ">
                         Skills
                     </span>
                 </h2>
@@ -55,7 +55,7 @@ export const Skills = () => {
                             <h4 className="mb-6 text-xl font-semibold text-center w-full">Tools</h4>
                             <div className="grid grid-cols-3 gap-x-5 gap-y-3 place-items-center w-full mx-auto justify-center">
                                 <SkillCard icon={<SiGit />} title="Git" color="#f05032"/>
-                                <SkillCard icon={<SiGithub />} title="GitHub" color="#ffffff"/>
+                                <SkillCard icon={<SiGithub />} title="GitHub" color="black"/>
                                 <SkillCard icon={<BiLogoVisualStudio />} title="VS Code" color="#007acc"/>
                                 <SkillCard icon={<SiFigma />} title="Figma" color="#f24e1e"/>
                                 <SkillCard icon={<SiVercel />} title="Vercel" color="#000000"/>
