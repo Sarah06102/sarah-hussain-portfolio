@@ -20,7 +20,7 @@ export default function Chatbot() {
         setLoading(true);
 
         try {
-            const res = await axios.post('http://127.0.0.1:5001/api/chat', {
+            const res = await axios.post('https://chatbot-476r.onrender.com/api/chat', {
                 message: input,
             });
 
