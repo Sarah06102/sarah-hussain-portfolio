@@ -109,7 +109,7 @@ export default function Chatbot() {
                                         setInput('');
                                         setMessages((prev) => [...prev, { role: 'user', content: prompt }]);
                                         setLoading(true);
-                                        axios.post('http://127.0.0.1:5001/api/chat', { message: prompt })
+                                        axios.post('https://chatbot-476r.onrender.com/api/chat', { message: prompt })
                                         .then((res) => {
                                             const assistantMessage = {
                                                 role: 'assistant',
