@@ -104,12 +104,6 @@ const ProjectData = [
     github: "https://github.com/Sarah06102/TrackMyApps",
   },
   {
-    name: "AutoTrack",
-    status: "(in progress)",
-    description: "A web-based expense tracker that helps users automate their spending logs, set budgets, and visualize financial habits. AutoTrack syncs in real time and offers personalized alerts, budget insights, and a clean, user-friendly interface.",
-    skills: ["HTML", "CSS", "Django", "React"],
-  },
-  {
     name: "MyPassVault",
     description: "A web-based password manager that simplifies secure credential storage, strong password generation, and password strength validation. MyPassVault offers customizable password rules and a user-friendly interface.",
     skills: ["React", "Django", "Tailwind CSS", "RESTful API", "PostgreSQL"],
@@ -117,58 +111,104 @@ const ProjectData = [
   },
 ];
 
+const InProgressProjectData = [
+  {
+    name: "AutoTrack",
+    description: "A web-based expense tracker that helps users automate their spending logs, set budgets, and visualize financial habits. AutoTrack syncs in real time and offers personalized alerts, budget insights, and a clean, user-friendly interface.",
+    skills: ["HTML", "CSS", "Django", "React"],
+  },
+  {
+    name: "TravelBuddy",
+    description: "A full-stack travel planner and expense tracker built with the MERN stack. It allows users to create detailed itineraries, set budgets, and visualize spending habits. TravelBuddy syncs in real time, provides personalized alerts, and features a clean, intuitive UI for efficient trip planning.",
+    skills: ["React", "Node.js", "Express.js", "JavaScript", "RESTful API", "MongoDB"],
+  },
+  {
+    name: "InvestSmart",
+    description: "A stock prediction and investment advisory app that uses historical market data and sentiment analysis to forecast stock trends. It helps users make informed decisions with simple, personalized suggestions on when to buy, hold, or sell.",
+    skills: ["React", "Flask", "PostgreSQL", "scikit-learn", "pandas"],
+  },
+];
+
 export const Projects = () => {
   const [isDarkTheme] = useLocalStorage("isDarkTheme", false);
 
   return (
-    <section id="Projects" className="py-24 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-indigo-500">Projects</h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {ProjectData.map((project, index) => (
-            <div
-              key={index}
-              className={`rounded-xl p-6 border card-transform hover:shadow-lg ${isDarkTheme === true ? "dark-card-projects" : "light-card-projects"}`}
-
-            >
-              <div className="flex items-center gap-3 mb-4 font-semibold text-lg">
-                <Code size={20} className="text-indigo-300"/>
-                <h3 className="text-xl font-bold">
-                  {project.name}
-                  {project.status && (
-                    <span className="ml-2 text-sm italic">
-                      {project.status}
+    <>
+      <section id="Projects" className="py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-indigo-500">Projects</h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {ProjectData.map((project, index) => (
+              <div key={index} className={`rounded-xl p-6 border card-transform hover:shadow-lg ${isDarkTheme === true ? "dark-card-projects" : "light-card-projects"}`}>
+                <div className="flex items-center gap-3 mb-4 font-semibold text-lg">
+                  <Code size={20} className="text-indigo-300"/>
+                  <h3 className="text-xl font-bold">
+                    {project.name}
+                    {project.status && (
+                      <span className="ml-2 text-sm italic">
+                        {project.status}
+                      </span>
+                    )}
+                  </h3>
+                </div>
+                <p className="text-sm mb-4">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.skills.map((skill, i) => (
+                    <span key={i}className={`px-2.5 py-0.5 text-xs font-semibold rounded-full ${isDarkTheme === true ? "dark-projects-skills" : "light-projects-skills"}`}>
+                      {skill}
                     </span>
-                  )}
-                </h3>
+                  ))}
+                </div>
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="block mt-4 text-indigo-400 hover:underline text-sm">
+                    GitHub
+                  </a>
+                )}
               </div>
-              <p className="text-sm mb-4">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {project.skills.map((skill, i) => (
-                  <span
-                  key={i}
-                  className={`px-2.5 py-0.5 text-xs font-semibold rounded-full ${isDarkTheme === true ? "dark-projects-skills" : "light-projects-skills"}`}
-                >
-                  {skill}
-                </span>
-                ))}
-              </div>
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block mt-4 text-indigo-400 hover:underline text-sm"
-                >
-                  GitHub
-                </a>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="mb-40 mt-20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-indigo-500">Projects I'm Currently Working On</h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {InProgressProjectData.map((project, index) => (
+              <div key={index} className={`rounded-xl p-6 border card-transform hover:shadow-lg ${isDarkTheme === true ? "dark-card-projects" : "light-card-projects"}`}>
+                <div className="flex items-center gap-3 mb-4 font-semibold text-lg">
+                  <Code size={20} className="text-indigo-300"/>
+                  <h3 className="text-xl font-bold">
+                    {project.name}
+                    {project.status && (
+                      <span className="ml-2 text-sm italic">
+                        {project.status}
+                      </span>
+                    )}
+                  </h3>
+                </div>
+                <p className="text-sm mb-4">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.skills.map((skill, i) => (
+                    <span key={i}className={`px-2.5 py-0.5 text-xs font-semibold rounded-full ${isDarkTheme === true ? "dark-projects-skills" : "light-projects-skills"}`}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="block mt-4 text-indigo-400 hover:underline text-sm">
+                    GitHub
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };

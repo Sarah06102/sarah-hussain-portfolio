@@ -4,7 +4,7 @@ export const Footer = () => {
     return(
         <footer className="py-6 px-8 relative border-t border-border mt-12 pt-8 flex flex-wrap justify-between items-center">
             <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Sarahhussain.co All rights reserved.</p>
-            <a href="#" className="p2 rounded-full bg-indigo-100/30 hover:bg-primary/20 text-indigo-300 transition-colors"><ArrowUp /></a>
+            <a href="#" className="rounded-full bg-indigo-100/30 hover:bg-primary/20 text-indigo-300 transition-colors mr-15"><ArrowUp /></a>
         </footer>
     )
 }
