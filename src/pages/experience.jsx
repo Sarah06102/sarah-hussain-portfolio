@@ -76,13 +76,11 @@ const ExperienceCard = ({ title, company, location, term, points, skills }) => {
             </div>
         </div>
     );
-} 
-    
-  
+}
 
 const Experience = () => {
     return (
-        <section id="Experience" className="py-10 px-6 max-w-4xl mx-auto">
+        <section id="Experience" className="py-25 px-6 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-indigo-500">Experience</h2>
             {experienceData.map((exp, i) => (
             <ExperienceCard key={i} {...exp} />

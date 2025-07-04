@@ -8,6 +8,7 @@ import { Mail, Github, Linkedin } from 'lucide-react';
 import { useEffect, useRef } from 'react'
 import Chatbot from "../components/Chatbot"
 import Experience from "./experience"
+import Contact from "./contact"
 
 export const ScrollFade = () => {
     const lastScrollY = useRef(window.scrollY);
@@ -95,6 +96,11 @@ export const Home = () => {
             {/* Experience */}
             <div className="fade-in-start">
                 <Experience />
+            </div>
+
+            {/* Contact */}
+            <div className="fade-in-start">
+                <Contact />
             </div>
 
             {/* Footer */}

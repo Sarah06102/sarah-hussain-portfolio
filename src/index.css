@@ -298,6 +298,21 @@ html, body {
   color: #4f46e5; 
 }
 
+.light-card-contact {
+  @apply bg-gray-50 text-gray-800 shadow-md border border-gray-200;
+}
+
+.dark-card-contact {
+  @apply bg-zinc-700 text-gray-800 shadow-md border border-gray-400;
+}
+
+.light-contact-input {
+  @apply bg-gray-50 text-gray-800 shadow-md border border-gray-300;
+}
+
+.dark-contact-input {
+  @apply bg-zinc-600 text-gray-200 shadow-md border border-gray-500;
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;
