@@ -109,6 +109,12 @@ const ProjectData = [
     skills: ["React", "Django", "Tailwind CSS", "RESTful API", "PostgreSQL"],
     github: "https://github.com/Sarah06102/MyPassVault",
   },
+  {
+    name: "TravelBuddy",
+    description: "A full-stack travel planner and expense tracker built with the MERN stack. It allows users to create detailed itineraries, set budgets, and visualize spending habits. TravelBuddy syncs in real time, provides personalized alerts, and features a clean, intuitive UI for efficient trip planning.",
+    skills: ["React", "Node.js", "Express.js", "JavaScript", "RESTful API", "MongoDB"],
+    github: "https://github.com/Sarah06102/TravelBuddy",
+  },
 ];
 
 const InProgressProjectData = [
@@ -116,11 +122,6 @@ const InProgressProjectData = [
     name: "AutoTrack",
     description: "A web-based expense tracker that helps users automate their spending logs, set budgets, and visualize financial habits. AutoTrack syncs in real time and offers personalized alerts, budget insights, and a clean, user-friendly interface.",
     skills: ["HTML", "CSS", "Django", "React"],
-  },
-  {
-    name: "TravelBuddy",
-    description: "A full-stack travel planner and expense tracker built with the MERN stack. It allows users to create detailed itineraries, set budgets, and visualize spending habits. TravelBuddy syncs in real time, provides personalized alerts, and features a clean, intuitive UI for efficient trip planning.",
-    skills: ["React", "Node.js", "Express.js", "JavaScript", "RESTful API", "MongoDB"],
   },
   {
     name: "InvestSmart",
