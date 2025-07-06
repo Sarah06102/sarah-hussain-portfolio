@@ -1,6 +1,8 @@
 import { SiPython, SiJavascript, SiHtml5, SiCss3, SiSqlite, SiTypescript, SiReact, SiTailwindcss, SiDjango, SiGit, SiGithub, SiFigma, SiFirebase, SiPytorch, SiVercel, SiRender } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa';
 import { BiLogoVisualStudio } from 'react-icons/bi';
+import { TbBrandReactNative } from "react-icons/tb";
+import { FaNodeJs } from "react-icons/fa";
 import useLocalStorage from 'use-local-storage';
 
 
@@ -29,7 +31,7 @@ export const Skills = () => {
                         {/* Languages */}
                         <div className="flex flex-col items-center">
                             <h4 className="mb-6 text-xl font-semibold text-center w-full">Languages</h4>
-                            <div className="grid grid-cols-3 gap-x-5 gap-y-3 place-items-center w-full mx-auto justify-center">
+                            <div className="grid grid-cols-3 gap-x-9 gap-y-3 place-items-center w-full mx-auto justify-center">
                                 <SkillCard icon={<SiJavascript />} title="Javascript" color="#f7df1e"/>
                                 <SkillCard icon={<SiPython />} title="Python" color="#306998"/>
                                 <SkillCard icon={<SiHtml5 />} title="HTML" color="#e34c26"/>
@@ -42,18 +44,20 @@ export const Skills = () => {
                         <div className="flex flex-col items-center">
                             {/* Frameworks & Libraries */}    
                             <h4 className="mb-6 text-xl font-semibold text-center w-full">Frameworks & Libraries</h4>
-                            <div className="grid grid-cols-2 gap-x-5 gap-y-3 place-items-center w-full mx-auto justify-center">
+                            <div className="grid grid-cols-3 gap-x-9 gap-y-3 place-items-center w-full mx-auto justify-center">
                                 <SkillCard icon={<SiReact />} title="React" color="#61dafb"/>
                                 <SkillCard icon={<SiTailwindcss />} title="Tailwind CSS" color="#38bdf8"/>
                                 <SkillCard icon={<SiDjango />} title="Django" color="#092e20"/>
+                                <SkillCard icon={<TbBrandReactNative />} title="React Native" color="#61dafb"/>
                                 <SkillCard icon={<SiFirebase />} title="Firebase" color="#ffcb2b"/>
+                                <SkillCard icon={<FaNodeJs />} title="Node.js" color="#215732"/>
                             </div>
                         </div>
 
                         <div className="flex flex-col items-center">
                             {/* Tools */} 
                             <h4 className="mb-6 text-xl font-semibold text-center w-full">Tools</h4>
-                            <div className="grid grid-cols-3 gap-x-5 gap-y-3 place-items-center w-full mx-auto justify-center">
+                            <div className="grid grid-cols-3 gap-x-9 gap-y-3 place-items-center w-full mx-auto justify-center">
                                 <SkillCard icon={<SiGit />} title="Git" color="#f05032"/>
                                 <SkillCard icon={<SiGithub />} title="GitHub" color="black"/>
                                 <SkillCard icon={<BiLogoVisualStudio />} title="VS Code" color="#007acc"/>
