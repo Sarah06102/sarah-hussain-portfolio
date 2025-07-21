@@ -155,7 +155,7 @@ export const Projects = () => {
                 <p className="text-sm mb-4">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap justify-center gap-2">
                   {project.skills.map((skill, i) => (
                     <span key={i}className={`px-2.5 py-0.5 text-xs font-semibold rounded-full ${isDarkTheme === true ? "dark-projects-skills" : "light-projects-skills"}`}>
                       {skill}
@@ -193,7 +193,7 @@ export const Projects = () => {
                 <p className="text-sm mb-4">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap justify-center gap-2">
                   {project.skills.map((skill, i) => (
                     <span key={i}className={`px-2.5 py-0.5 text-xs font-semibold rounded-full ${isDarkTheme === true ? "dark-projects-skills" : "light-projects-skills"}`}>
                       {skill}
