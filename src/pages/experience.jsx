@@ -3,28 +3,52 @@ import { Briefcase } from "lucide-react";
 import useLocalStorage from 'use-local-storage';
 
 const experienceData = [
-  {
-    title: "Product Manager Intern",
-    company: "Shomigo",
-    location: "Remote",
-    term: "Fall 2024",
-    points: [
-        "Collaborated with an 8-person cross-functional team across engineering, design, and marketing to develop and launch a B2C mobile app and Chrome extension.",
-        "Enabled shoppers to save products across their favorite online stores and share them for feedback.",
-        "Worked under the mentorship of a Senior Product Manager to drive product development from 0 to 250 MAUs in 2 months.",
-    ],
-    skills: ["Product Management", "User Research & Feedback Loops", "Agile Methodology", "B2C Product Development", "Cross-functional Collaboration"],
-  },
-  {
-    title: "Data Analytics Intern",
-    company: "Ambitious Labs",
-    location: "Remote",
-    term: "Summer 2024",
-    points: [
-        "Increased reporting efficiency by 35% by using SQL & Tableau to create data visualizations on key performance metrics and performance measures for Ambitious Lab’s core education product, LabDash.",
-    ],
-    skills: ["SQL", "Tableau", "Data Visualization", "Performance Metrics Analysis", "Data Analysis", "KPI Dashboarding"],
-  },
+    {
+        title: "Software Engineer, backend",
+        company: "teaBOT (YC S15)",
+        location: "Remote",
+        term: "Fall 2025",
+        points: [
+            "Migrate backend services from AWS Elastic Beanstalk to AWS Lambda and API Gateway to improve scalability and reduce infrastructure costs.",
+            "Refactor code into modular, event-driven functions and design secure RESTful APIs for seamless client integrations.",
+            "Automate deployments with CI/CD pipelines and enhance monitoring using CloudWatch for greater reliability.",
+        ],
+        skills: ["AWS", "Node.js/JavaScript", "RESTful API Design", "Event-Driven Architecture", "CI/CD"],
+    },
+    {
+        title: "M&A Analyst",
+        company: "Westonview Partners",
+        location: "Remote",
+        term: "Summer 2025",
+        points: [
+            "Conducted industry research and profiled acquisition targets using Excel and databases to support deal sourcing, outreach, and preliminary financial analysis.",
+            "Analyzed key business metrics and market trends to assess attractiveness of targets and inform investment decisions.",
+            "Supported due diligence by gathering and reviewing company information, analyzing performance data, and summarizing findings for advisory discussions.",
+        ],
+        skills: ["Financial Modeling & Valuation", "Industry & Market Research", "Excel", "M&A Deal Sourcing & Target Profiling"],
+    },
+    {
+        title: "Product Manager Intern",
+        company: "Shomigo",
+        location: "Remote",
+        term: "Fall 2024",
+        points: [
+            "Collaborated with an 8-person cross-functional team across engineering, design, and marketing to develop and launch a B2C mobile app and Chrome extension.",
+            "Enabled shoppers to save products across their favorite online stores and share them for feedback.",
+            "Worked under the mentorship of a Senior Product Manager to drive product development from 0 to 250 MAUs in 2 months.",
+        ],
+        skills: ["Product Management", "User Research & Feedback Loops", "Agile Methodology", "B2C Product Development", "Cross-functional Collaboration"],
+    },
+    {
+        title: "Data Analytics Intern",
+        company: "Ambitious Labs",
+        location: "Remote",
+        term: "Summer 2024",
+        points: [
+            "Increased reporting efficiency by 35% by using SQL & Tableau to create data visualizations on key performance metrics and performance measures for Ambitious Lab’s core education product, LabDash.",
+        ],
+        skills: ["SQL", "Tableau", "Data Visualization", "Performance Metrics Analysis", "Data Analysis", "KPI Dashboarding"],
+    },
 ];
 
 
