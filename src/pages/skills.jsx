@@ -1,5 +1,5 @@
 import { SiPython, SiJavascript, SiHtml5, SiCss3, SiSqlite, SiTypescript, SiReact, SiTailwindcss, SiDjango, SiGit, SiGithub, SiFigma, SiFirebase, SiPytorch, SiVercel, SiRender } from 'react-icons/si'
-import { FaJava } from 'react-icons/fa';
+import { FaJava, FaAws } from 'react-icons/fa';
 import { BiLogoVisualStudio } from 'react-icons/bi';
 import { TbBrandReactNative } from "react-icons/tb";
 import { FaNodeJs } from "react-icons/fa";
