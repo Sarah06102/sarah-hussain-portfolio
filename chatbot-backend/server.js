@@ -18,7 +18,7 @@ app.post('/api/chat', async (req, res) => {
     try {
         console.log("Using model: gemini-1.5-flash");
         const response = await axios.post(
-            'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent',
+            'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent',
             {
                 contents: [
                     {
