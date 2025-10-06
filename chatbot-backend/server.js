@@ -22,7 +22,6 @@ app.post('/api/chat', async (req, res) => {
             {
                 contents: [
                     {
-                        role: 'user',
                         parts: [{ text: `${context}\n\nUser question: ${message}`}],
                     },
                 ],
@@ -46,8 +45,8 @@ app.post('/api/chat', async (req, res) => {
         const reply = response.data.candidates?.[0]?.content?.parts?.[0]?.text || 'No reply.';
         res.json({ reply });
     } catch (err) {
-        console.error('Gemini error:', err.response?.data || err.message);
-        res.status(500).json({ error: 'Gemini failed' });
+        console.error("Gemini error:", JSON.stringify(err.response?.data || err.message, null, 2));
+        res.status(500).json({ error: err.response?.data || err.message || "Gemini failed" });
     }
 });
 
