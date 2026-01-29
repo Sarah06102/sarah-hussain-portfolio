@@ -14,7 +14,7 @@ export const NavBar = () => {
         {name: "Experience", href: "#Experience"},
         {name: "Contact", href: "#Contact"},
     ];
-    const resumeLink = { name: "Resume", href: "/Sarah Hussain Resume.docx.pdf", download: true };
+    const resumeLink = { name: "Resume", href: "/Sarah Hussain Resume 01292026.docx.pdf", download: true };
 
 
     useEffect(() => {

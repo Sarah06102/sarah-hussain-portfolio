@@ -18,7 +18,7 @@ app.post('/api/chat', async (req, res) => {
     try {
         console.log("Using model: gemini-1.5-flash");
         const response = await axios.post(
-            'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent',
+            'https://generativelanguage.googleapis.com/v1beta1/models/gemini-1.5-flash-latest:generateContent',
             {
                 contents: [
                     {
@@ -35,9 +35,7 @@ app.post('/api/chat', async (req, res) => {
             {
                 headers: {
                     'Content-Type': 'application/json',
-                },
-                params: {
-                    key: process.env.GEMINI_API_KEY,
+                    'Authorization': `Bearer ${process.env.GEMINI_API_KEY}`,
                 },
             }
         );  

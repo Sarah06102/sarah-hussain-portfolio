@@ -5,7 +5,7 @@ import { About } from "./about"
 import { Projects } from "./projects"
 import { Skills } from "./skills"
 import { Mail, Github, Linkedin } from 'lucide-react';
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Chatbot from "../components/Chatbot"
 import Experience from "./experience"
 import Contact from "./contact"
@@ -36,7 +36,37 @@ export const ScrollFade = () => {
     return null; 
 };
 
+export function useTypewriter(text, speed = 80) {
+    const [displayedText, setDisplayedText] = useState("");
+    const [done, setDone] = useState(false);
+    const [trigger, setTrigger] = useState(0);
+  
+    useEffect(() => {
+      let i = 0;
+      setDisplayedText("");
+      setDone(false);
+  
+      const interval = setInterval(() => {
+        setDisplayedText(text.slice(0, i + 1));
+        i++;
+        if (i === text.length) {
+          clearInterval(interval);
+          setDone(true);
+        }
+      }, speed);
+  
+      return () => clearInterval(interval);
+    }, [text, speed, trigger]);
+  
+    return {
+      displayedText,
+      done,
+      retrigger: () => setTrigger((t) => t + 1),
+    };
+};
+
 export const Home = () => {
+    const { displayedText, done, retrigger } = useTypewriter("Hi, I'm Sarah Hussain", 80);
     return (
         <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
             {/* Navigation Bar & Toggle */}
@@ -51,9 +81,10 @@ export const Home = () => {
                 
                 <div className="container max-w-4xl mx-auto text-center">
                     <div className="space-y-6 px-2 sm:px-6">
-                        <h1 className="text-4xl md:text-5xl sm:text-4xl font-bold fade-in-start">
-                            <span >Hi, I'm </span>
-                            <span className="text-indigo-500">Sarah Hussain</span>
+                        <h1 onClick={retrigger} title="Click to replay" className="text-4xl md:text-5xl sm:text-4xl font-bold fade-in-start cursor-pointer select-none">
+                            <span>{displayedText.slice(0, 8)}</span>
+                            <span className="text-indigo-500">{displayedText.slice(8)}</span>
+                            {!done && <span className="animate-pulse">|</span>}
                         </h1>
                         <div className="container space-y-5 text-lg fade-in-start sm:text-lg">
                             <p>Engineering Student @ the University of Waterloo</p>
